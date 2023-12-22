@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input,select,option {
+    outline: none;
+    background: none;
+  }
+  .dark:root{
+    color: white;
+  }
+}

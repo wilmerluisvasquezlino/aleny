@@ -3,6 +3,25 @@
 @tailwind utilities;
 
 @layer base {
+  :root{
+    --bg-scrollbar-thumb: hsla(0, 0%, 0%, 0.1);
+    --bg-scrollbar-thumb_hover: hsla(0, 0%, 0%, 0.15);
+  }
+  .dark:root{
+    --bg-scrollbar-thumb: hsla(0, 0%, 100%, 0.1);
+    --bg-scrollbar-thumb_hover: hsla(0, 0%, 100%, 0.15);
+  }
+  ::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-scrollbar-thumb);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-scrollbar-thumb_hover);
+  }
   input,select,option {
     outline: none;
     background: none;
@@ -11,3 +30,9 @@
     color: white;
   }
 }
+@layer utilities {
+  .scrollbar-none::-webkit-scrollbar {
+    display: none; 
+  }
+}
+

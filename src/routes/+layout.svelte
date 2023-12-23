@@ -5,21 +5,20 @@
 	import { onMount } from "svelte";
 	import SetTheme from "../components/SetTheme.svelte";
 	import InputSearch from "../components/Inputs/InputSearch.svelte";
+	import Header from "./Header.svelte";
   onMount(()=>{
     setUserTheme()
     document.title = nameApp
   });
 </script>
-<div>
-  <header class="flex p-5">
-    <InputSearch/>
-    <SetTheme/>
-    
-    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="" alt="Bordered avatar">
-
-  </header>
-  <slot />
+<div class="flex flex-col items-center">
+  <div class="app w-full">
+    <Header/>
+    <slot />
+  </div>
 </div>
 <style>
-
+  .app{
+    max-width: 1200px;
+  }
 </style>

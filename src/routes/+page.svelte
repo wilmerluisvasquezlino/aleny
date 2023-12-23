@@ -31,9 +31,11 @@
     name:"Datasette",
     category:"Trabajo",
   }]
+
+  let categorys = ['Productividad', 'Social']
 </script>
 <div class="">
-  <section class="px-3">
+  <section class="px-3 pt-2">
     <h2 class="font-bold text-2xl pb-3">Categorias Principales</h2>
     <div class="flex gap-3 overflow-x-scroll scrollbar-none">
       <!-- Card -->
@@ -75,7 +77,7 @@
       </div>
     </div>
   </section>
-  <section class="flex flex-col p-4 gap-4">
+  <section class="flex flex-col p-4 gap-4 pt-8">
     <h2 class="font-bold text-2xl">Destacado</h2>
     <div class="cards grid gap-4">
       {#each sites as _}

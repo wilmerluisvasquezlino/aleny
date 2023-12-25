@@ -1,6 +1,9 @@
 <script lang="ts">
-  export let props;
-  const {icon,url,name} = props;
+	import type { CardTarget } from "$lib/interface";
+
+  
+  export let info: CardTarget;
+  const {icon,url,name} = info;
   const title = name
   const views = Math.round(Math.random()*10000)
   const iLove = Math.round(Math.random()*10000);
@@ -10,15 +13,17 @@
     compactDisplay: 'short',
     maximumSignificantDigits: 2,
   });
-
 </script>
-<article class="flex p-3 pr-5 rounded-xl gap-3">
+<article class="flex p-3 pr-5 rounded-xl gap-3 bg-white dark:bg-white dark:bg-opacity-5">
   <div class="icon flex-shrink-0">
     <img class="w-10 h-10" src={icon} alt="">
   </div>
   <div class="flex flex-col flex-grow">
-    <h2 class="font-bold">{title}</h2>
-    <div class="text-sm flex-grow"><a>Juegos</a> • <a>Productividad</a></div>
+    <h2 class="font-bold flex gap-2 items-center">
+      {title}
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="#0891b2" d="m23 12l-2.44-2.78l.34-3.68l-3.61-.82l-1.89-3.18L12 3L8.6 1.54L6.71 4.72l-3.61.81l.34 3.68L1 12l2.44 2.78l-.34 3.69l3.61.82l1.89 3.18L12 21l3.4 1.46l1.89-3.18l3.61-.82l-.34-3.68zm-13 5l-4-4l1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg>
+    </h2>
+    <div class="text-sm flex-grow"><a href="#n">Juegos</a> • <a href="#n">Productividad</a></div>
     <div class="flex gap-4 text-xs pt-1">
       <div class="flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path class="fill-black dark:fill-white" fill-rule="evenodd" d="M5.624 4.424C3.965 5.182 2.75 6.986 2.75 9.137c0 2.197.9 3.891 2.188 5.343c1.063 1.196 2.349 2.188 3.603 3.154c.298.23.594.459.885.688c.526.415.995.778 1.448 1.043c.452.264.816.385 1.126.385c.31 0 .674-.12 1.126-.385c.453-.265.922-.628 1.448-1.043c.29-.23.587-.458.885-.687c1.254-.968 2.54-1.959 3.603-3.155c1.289-1.452 2.188-3.146 2.188-5.343c0-2.15-1.215-3.955-2.874-4.713c-1.612-.737-3.778-.542-5.836 1.597a.75.75 0 0 1-1.08 0C9.402 3.882 7.236 3.687 5.624 4.424M12 4.46C9.688 2.39 7.099 2.1 5 3.059C2.786 4.074 1.25 6.426 1.25 9.138c0 2.665 1.11 4.699 2.567 6.339c1.166 1.313 2.593 2.412 3.854 3.382c.286.22.563.434.826.642c.513.404 1.063.834 1.62 1.16c.557.325 1.193.59 1.883.59s1.326-.265 1.883-.59c.558-.326 1.107-.756 1.62-1.16a78.6 78.6 0 0 1 .826-.642c1.26-.97 2.688-2.07 3.854-3.382c1.457-1.64 2.567-3.674 2.567-6.339c0-2.712-1.535-5.064-3.75-6.077c-2.099-.96-4.688-.67-7 1.399" clip-rule="evenodd"/></svg>

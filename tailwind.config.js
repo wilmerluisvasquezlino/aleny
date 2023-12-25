@@ -5,11 +5,12 @@ export default {
   theme: {
     extend: {
       colors:{
-        'appdark': '#0F172A'
+        'appdark': '#0F172A',
+        'applight': '#eff6ff',
       }
     },
     fontFamily: {
-      'sans': ['Poppins Regular','ui-sans-serif', 'system-ui'],
+      'sans': ['Poppins Regular','Poppins','ui-sans-serif', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
       'mono': ['ui-monospace', 'SFMono-Regular'],
       'display': ['Oswald'],

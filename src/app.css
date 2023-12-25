@@ -29,6 +29,7 @@
   .dark:root{
     color: white;
   }
+
 }
 @layer utilities {
   .scrollbar-none::-webkit-scrollbar {

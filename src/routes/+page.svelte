@@ -1,6 +1,10 @@
-<script>
-	import App from "../components/Cards/App.svelte";
-  let sites = [{
+<script lang="ts">
+	import { page } from "$app/stores";
+	import { categoriasStites } from "$lib/datos";
+  import type { CardTarget } from "$lib/interface";
+  import App from "../components/Cards/App.svelte";
+
+  const sites: CardTarget[] = [{
     icon:"https://cdn.svgporn.com/logos/figma.svg",
     url:"figma.com",
     name:"Figma",
@@ -32,9 +36,19 @@
     category:"Trabajo",
   }]
 
-  let categorys = ['Productividad', 'Social']
 </script>
 <div class="">
+  <!-- Categorias -->
+  <!-- <div class="">
+    <div class="flex overflow-x-scroll scrollbar-none gap-1">
+      {#each categoriasStites as _}
+        <a href="/?category={_}" class:category-activo={$page.url.searchParams.get('category') == _} class="flex flex-shrink-0 items-center py-1 gap-1 px-2 rounded-xl">
+          {_}
+        </a>
+      {/each}
+    </div>
+  </div> -->
+  <!-- content -->
   <section class="px-3 pt-2">
     <h2 class="font-bold text-2xl pb-3">Categorias Principales</h2>
     <div class="flex gap-3 overflow-x-scroll scrollbar-none">
@@ -81,12 +95,27 @@
     <h2 class="font-bold text-2xl">Destacado</h2>
     <div class="cards grid gap-4">
       {#each sites as _}
-        <App props={_}/>
+        <App info={_}/>
       {/each}
     </div>
   </section>
 </div>
 <style>
+  /* .category-activo{
+    position: relative;
+    color: blue;
+    font-weight: bold;
+  }
+  .category-activo::before{
+    content: " ";
+    height: 4px;
+    width: 50%;
+    position: absolute;
+    background-color: blue;
+    left: 25%;
+    border-radius: 10px;
+    bottom: 0;
+  } */
   @media (min-width:0px) and (max-width:400px){
     .cards{
       @apply grid-cols-1;

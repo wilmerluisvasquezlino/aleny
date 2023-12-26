@@ -1,6 +1,6 @@
 <script>
-	import InputSearch from "../components/Inputs/InputSearch.svelte";
-	import SetTheme from "../components/SetTheme.svelte";
+	import InputSearch from "../../components/Inputs/InputSearch.svelte";
+	import SetTheme from "../../components/SetTheme.svelte";
 
 
 </script>
@@ -23,8 +23,9 @@
       Crear
     </a>
     <SetTheme/>
-   
-    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://mighty.tools/mockmind-api/content/human/5.jpg" alt="Bordered avatar">
+    <a href="/login">
+      <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://mighty.tools/mockmind-api/content/human/5.jpg" alt="Bordered avatar">
+    </a>
   </div>
  
   

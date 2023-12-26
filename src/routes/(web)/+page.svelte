@@ -2,7 +2,7 @@
 	import { page } from "$app/stores";
 	import { categoriasStites } from "$lib/datos";
   import type { CardTarget } from "$lib/interface";
-  import App from "../components/Cards/App.svelte";
+  import App from "../../components/Cards/App.svelte";
 
   const sites: CardTarget[] = [{
     icon:"https://cdn.svgporn.com/logos/figma.svg",

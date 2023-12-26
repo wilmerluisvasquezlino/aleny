@@ -1,10 +1,10 @@
 <script>
-  import "../app.css";
+  import "../../app.css";
   import {setUserTheme} from "$lib/tailwindTheme";
   import { nameApp } from "$lib/infoCompany";
 	import { onMount } from "svelte";
-	import SetTheme from "../components/SetTheme.svelte";
-	import InputSearch from "../components/Inputs/InputSearch.svelte";
+	import SetTheme from "../../components/SetTheme.svelte";
+	import InputSearch from "../../components/Inputs/InputSearch.svelte";
 	import Header from "./Header.svelte";
   onMount(()=>{
     setUserTheme()

@@ -1,15 +1,15 @@
 <script>
-  import "../../app.css";
-  import {setUserTheme} from "$lib/tailwindTheme";
-  import { nameApp } from "$lib/infoCompany";
-	import { onMount } from "svelte";
-	import SetTheme from "../../components/SetTheme.svelte";
-	import InputSearch from "../../components/Inputs/InputSearch.svelte";
+	import { goto } from "$app/navigation";
+	import { supabase } from "$lib/supabase/supabase";
 	import Header from "./Header.svelte";
-  onMount(()=>{
-    setUserTheme()
-    document.title = nameApp
-  });
+
+  supabase.auth.onAuthStateChange((event,session) =>{
+    // if (!session) {
+    //   goto('/login');
+    // }
+  })
+  
+
 </script>
 <div class="flex flex-col items-center">
   <div class="app w-full">

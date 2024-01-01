@@ -23,7 +23,7 @@
       Crear
     </a>
     <SetTheme/>
-    <a href="/login">
+    <a href="/logIn">
       <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://mighty.tools/mockmind-api/content/human/5.jpg" alt="Bordered avatar">
     </a>
   </div>

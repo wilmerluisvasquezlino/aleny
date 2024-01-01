@@ -1,43 +1,18 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 	import { categoriasStites } from "$lib/datos";
-  import type { CardTarget } from "$lib/interface";
-  import App from "../../components/Cards/App.svelte";
+  import CardLink from "../../components/Cards/CardLink.svelte";
+	import Images from "./Images.svelte";
+  import  type { CardTarget } from "$lib/interface";
 
-  const sites: CardTarget[] = [{
-    icon:"https://cdn.svgporn.com/logos/figma.svg",
-    url:"figma.com",
-    name:"Figma",
-    category:"Productividad",
-  },{
-    icon:"https://cdn.svgporn.com/logos/tiktok-icon.svg",
-    url:"tiktok.com",
-    name:"Tiktok",
-    category:"Social",
-  },{
-    icon:"https://cdn.svgporn.com/logos/pandacss-icon.svg",
-    url:"panda.dev",
-    name:"Panda CSS",
-    category:"Trabajo",
-  },{
-    icon:"https://cdn.svgporn.com/logos/codium-icon.svg",
-    url:"codium.ai",
-    name:"Codium",
-    category:"Trabajo",
-  },{
-    icon:"https://cdn.svgporn.com/logos/crossplane-icon.svg",
-    url:"panda.dev",
-    name:"Crossplane",
-    category:"Trabajo",
-  },{
-    icon:"https://cdn.svgporn.com/logos/datasette-icon.svg",
-    url:"panda.dev",
-    name:"Datasette",
-    category:"Trabajo",
-  }]
+  let sites: CardTarget[] = []
+  fetch('/api/getLinksWebs?idLink=').then((data)=>data.json()).then((webLinks)=>{
+    sites = webLinks
+  })
 
 </script>
 <div class="">
+  <!-- <Images/> -->
   <!-- Categorias -->
   <!-- <div class="">
     <div class="flex overflow-x-scroll scrollbar-none gap-1">
@@ -95,7 +70,7 @@
     <h2 class="font-bold text-2xl">Destacado</h2>
     <div class="cards grid gap-4">
       {#each sites as _}
-        <App info={_}/>
+        <CardLink props={_}/>
       {/each}
     </div>
   </section>

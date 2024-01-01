@@ -1,6 +1,10 @@
 export interface CardTarget {
-  url: string
-  icon: string
+  id: string
+  title: string;
+  description: string
+  icon_url: string
   name: string
-  category: string
+  website_link: string
+  category: string[]
+  visits: number
 }

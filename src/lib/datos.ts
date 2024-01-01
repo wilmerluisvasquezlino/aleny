@@ -9,7 +9,8 @@ export const categoriasStites: string[] = [
 	'TV',
 	'Peliculas',
 	'Documentation',
-
+	'Browser',
+	'CMS',
 	'Inspiration',
 	'Illustraciones',
 	'Icons',
@@ -28,4 +29,7 @@ export const categoriasStites: string[] = [
 	'Proyect Tools',
 	'AI Tools',
 	'Website Builder',
+	'Community',
+	'Education',
+	'Software'
 ];

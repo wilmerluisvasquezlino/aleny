@@ -7,7 +7,7 @@ import type { CardTarget } from "$lib/interface";
   const views = Math.round(Math.random()*10000)
   const iLove = Math.round(Math.random()*10000);
 
-  const formattedNumber = new Intl.NumberFormat('es-ES', {
+  const formattedNumber = new Intl.NumberFormat('en-US', {
     notation: 'compact',
     compactDisplay: 'short',
     maximumSignificantDigits: 2,

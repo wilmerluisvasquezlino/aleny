@@ -7,6 +7,9 @@ export default {
       colors:{
         'appdark': '#0F172A',
         'applight': '#eff6ff',
+      },
+      boxShadow:{
+        'primary':'0 3px 6px hsla(0,100%,0%,0.5)'
       }
     },
     fontFamily: {

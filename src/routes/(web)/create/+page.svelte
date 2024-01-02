@@ -1,13 +1,15 @@
 <script lang="ts">
   import axios from "axios";
 	import { categoriasStites } from "$lib/datos";
-	import CheckBox from "../../../components/Inputs/CheckBox.svelte";
 	import { supabase } from "$lib/supabase/supabase";
 
   let urlImg: string = "";
   let title = "";
   let link = "";
-  let state = null;
+
+  let categoryes = [];
+
+	let state: 'loading' | 'success' | 'error' | null = null;
 
   // validacion de url
   $: if (/^https?:\/\//.test(link)) {
@@ -33,6 +35,7 @@
   async function createWebLink() {
     state = 'loading';
     const {data: user } = await supabase.auth.getUser();
+    console.log(user);
     if(user.user == null) return null;
 
     const {data, status,statusText,...rest} = await axios.postForm('/api/createWebLink',{
@@ -50,7 +53,7 @@
 <div class="flex flex-col p-3 gap-3">
   <h2 class="flex items-center justify-between text-2xl font-bold pt-3 text-blue-500">
     Created New Link
-    <button on:click={createWebLink} type="submit" class="flex items-center gap-2 py-2 px-4 justify-center bg-white bg-opacity-10 rounded-xl">
+    <button on:click={createWebLink} class="flex items-center text-sm gap-2 py-2 px-4 justify-center bg-white bg-opacity-10 rounded-xl">
       <div>
         {#if state == 'loading'}
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="#4f46e5" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><path fill="#4f46e5" d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"><animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></svg>
@@ -60,7 +63,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="#e11d48" fill-rule="evenodd" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10M8.97 8.97a.75.75 0 0 1 1.06 0L12 10.94l1.97-1.97a.75.75 0 0 1 1.06 1.06L13.06 12l1.97 1.97a.75.75 0 0 1-1.06 1.06L12 13.06l-1.97 1.97a.75.75 0 0 1-1.06-1.06L10.94 12l-1.97-1.97a.75.75 0 0 1 0-1.06" clip-rule="evenodd"/></svg>
         {/if}
       </div>
-      Enviar
+      Crear
     </button>
 
   </h2>

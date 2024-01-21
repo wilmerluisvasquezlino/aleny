@@ -26,12 +26,12 @@ import type { CardTarget } from "$lib/interface";
   <div class="icon flex-shrink-0">
     <img class="w-10 h-10" src={icon_url} alt="">
   </div>
-  <div class="flex flex-col flex-grow pr-3">
+  <div class="flex flex-col flex-grow justify-between pr-3">
     <h2 class="font-bold flex gap-2 items-center">
       {title}
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="#0891b2" d="m23 12l-2.44-2.78l.34-3.68l-3.61-.82l-1.89-3.18L12 3L8.6 1.54L6.71 4.72l-3.61.81l.34 3.68L1 12l2.44 2.78l-.34 3.69l3.61.82l1.89 3.18L12 21l3.4 1.46l1.89-3.18l3.61-.82l-.34-3.68zm-13 5l-4-4l1.41-1.41L10 14.17l6.59-6.59L18 9z"/></svg>
     </h2>
-    <div class="text-sm flex-grow text-gray-600 dark:text-gray-400"><a href="#n" class="hover:text-sky-400 hover:underline">Juegos</a> • <a href="#n">Productividad</a> • <a href="#n">AI Tools</a></div>
+    <div class="text-sm flex-grow text-gray-600 dark:text-gray-400"><a href="#n" class="hover:text-sky-400 hover:underline">Juegos</a> • <a href="#n">AI Tools</a></div>
     <!-- <div class="text-sm flex-grow text-blue-500">{description}</div> -->
     <div class="flex gap-4 text-xs pt-1">
       <div class="flex items-center gap-2">

@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { getThemeUser, setDarkTheme, setLightTheme, setSystemTheme } from "$lib/tailwindTheme";
+	import { onMount } from "svelte";
 
-  let theme: string = getThemeUser();
+  let theme: string;
+  onMount(()=>{
+    theme = getThemeUser()
+  })
   function changeTheme() {
     if (theme == 'light') {
       setDarkTheme();
@@ -12,10 +16,6 @@
     }
   }
 </script>
-<svelte:window on:storage={(e)=> {
-  theme = getThemeUser();
-  console.log('o');
-}}/>
 
 <button on:click={changeTheme}>
   {#if theme == 'light'}

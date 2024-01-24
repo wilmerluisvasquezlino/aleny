@@ -61,5 +61,23 @@
     border-right: 2px solid #3498db6c hsl(221, 54%, 33%);
     caret-width: 5px;
   }
+  .indent{
+    position: relative;
+  }
+  .indent::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.178);
+    top: -2px;
+    left: 0;
+    bottom: -2px;
+  }
+  .text-pretty{
+    text-wrap: pretty;
+  }
+  .text-balance{
+    text-wrap: balance;
+  }
 }
 

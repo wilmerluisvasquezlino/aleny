@@ -1,0 +1,74 @@
+T1: Hi 🖐️ guide to open source for the social sector
+P: JavaScript can access an existing selection, select/deselect DOM nodes as a whole or partially, remove the selected content from the document, wrap it into a tag, and so on.
+T2: Todos los Metodos del Array
+T3: Todos los Metodos del Array
+T4: Todos los Metodos del Array
+T5: Todos los Metodos del Array
+T6: Todos los Metodos del Array
+P: Calling all nonprofits! Do you want to implement open source software but don’t know where to start? We’ve got good news; you can easily get started by consulting our new guide.
+T2: .at(indice: number)
+P: El at es para obntener el elemento segun le idiquemos de indice, pero si usamos un negativo empezara de atras
+Code: array.at
+  let ftutas = ["pera","planaos","uva"]
+  frutas.at(1) // planaos
+  frutas.at(-1) // uva
+T2: 🧊 .map()
+P: En JavaScript, el método map() es una función de los arrays que se utiliza para transformar cada elemento de un array según una función dada, generando un nuevo array con los resultados de aplicar la función a cada elemento original. Este método no modifica el array original, sino que crea y devuelve un nuevo array con los resultados.
+P: La sintaxis básica del método map() es la siguiente:
+Code: as
+  const newArray = arrayOriginal.map(function(element, index, array) {
+    // código de transformación
+    return nuevoElemento;
+  });
+
+T2: 🧊 .filter()
+T2: 🧊 .reduce()
+P: Para compartir a otros dispositivos
+$ npm run dev -- --host
+T2: .lastIndex()
+$ npm install
+[NOTE] Tambien hay que tomas en cuenta que la vida es asombro para nosotros
+$ cd app
+P: JavaScript can access an existing selection, select/deselect DOM nodes as a whole or partially, remove the selected content from the document, wrap it into a tag, and so on.
+P: You can find some recipes for common tasks at the end of the chapter, in “Summary” section. Maybe that covers your current needs, but you’ll get much more if you read the whole text.
+P: The underlying Range and Selection objects are easy to grasp, and then you’ll need no recipes to make them do what you want.
+[IMPORTANT] Magnifico
+[CAUTION] Magnifico
+[NOTE] Magnifico
+[TIP] Magnifico
+[WARNING] Magnifico
+
+T2: Range
+P: The basic concept of selection is Range, that is essentially a pair of “boundary points”: range start and range end.
+P: A Range object is created without parameters:
+
+Code: filesc
+  let range = new Range();
+T3: Planet
+@widget 
+
+P: Mire las siguientes imagenes
+Img: https://s3-alpha.figma.com/hub/file/3540086946/966b4238-c04e-44be-af42-107407863c65-cover.png
+P: loook
+  
+Code: bh.js
+  function manierfd(name, number, search){
+    console.log()
+    for(){
+      while(wer ==   buld){
+        n
+      }
+    }
+  }
+  
+  const bilds
+$ npm run dev
+Code: CSS Nesting.css
+  .caret:bin{
+    cursor:button
+  }
+[NOTE] file
+
+#Img: https://www.svgrepo.com/show/530483/subscription.svg
+
+P: Para empezar el mundo es grande

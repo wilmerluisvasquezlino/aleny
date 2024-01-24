@@ -32,9 +32,9 @@ export default {
       }
     },
     fontFamily: {
-      'sans': ['Poppins Regular','Poppins','ui-sans-serif', 'system-ui'],
+      'sans': ['Dm Sans','Poppins Regular','Poppins','ui-sans-serif', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
-      'mono': ['ui-monospace', 'SFMono-Regular'],
+      'mono': ['Cascadia Code','ui-monospace', 'SFMono-Regular'],
       'display': ['Oswald'],
       'body': ['"Open Sans"'],
     },

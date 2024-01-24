@@ -40,6 +40,6 @@
 	"dependencies": {
 		"@supabase/supabase-js": "^2.39.1",
 		"axios": "^1.6.3",
-		"duokit": "^0.0.2"
+		"duokit": "^0.0.3"
 	}
 }

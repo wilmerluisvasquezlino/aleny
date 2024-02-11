@@ -3,7 +3,6 @@
   export const isDisable: boolean = false;
   export const radius = "md";
   export let color: "default" | "primary" | "secondary" | "success" | "warning" | "danger" = "default";
-  console.log(color)
 </script>
 <button on:click class="rounded-lg text-white bg-{color} size_{size}"><slot/></button>
 <style>

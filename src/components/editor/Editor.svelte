@@ -13,7 +13,6 @@
     let g = document.createElement('span');
     g.textContent = "Hola"
     range.insertNode(g)
-    console.log(rangeSelection)
   
   }
   function selecty() {

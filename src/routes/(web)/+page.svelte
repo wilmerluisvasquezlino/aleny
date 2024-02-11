@@ -7,39 +7,40 @@
 	import Search from "./Search.svelte";
 	import SectionCard from "./SectionCard.svelte";
 
-  let sites: CardTarget[] = [];
   let recents: CardTarget[] = [];
   let state:"load"|"loading"|"error" = "loading";
 
-  (async function() {
-    state = "error"
+  // (async function() {
+  //   state = "error"
 
-    const response = await fetch('/api/getLinksWebs?idLink=');
-    if (response.ok) {
-      const data = await response.json() as CardTarget[];
-      sites = data;
-      let db = 'rec'
-      let y ;
-      if (y = localStorage.getItem(db)) {
-        recents = JSON.parse(y);
-      } else {
-        localStorage.setItem(db,JSON.stringify(sites.slice(0,8)))
-      }
-      state = "load"
-    } else {
-      state = "error"
+  //   const response = await fetch('/api/getLinksWebs?idLink=');
+  //   if (response.ok) {
+  //     const data = await response.json() as CardTarget[];
+  //     sites = data;
+  //     let db = 'rec'
+  //     let y ;
+  //     if (y = localStorage.getItem(db)) {
+  //       recents = JSON.parse(y);
+  //     } else {
+  //       localStorage.setItem(db,JSON.stringify(sites.slice(0,8)))
+  //     }
+  //     state = "load"
+  //   } else {
+  //     state = "error"
 
-    }
+  //   }
     
     
-  })();
+  // })();
   
- 
+  export let data: CardTarget[] = [];
+  data = data.data
+  
 </script>
 <div class="page">
   <div class="flex flex-col">
     <h2 class="self-center text-lg pt-8 pb-4">All <b>Free</b> And <b>Pro</b> Sites Available</h2>
-    <h2 class="self-center text-4xl"><b>{sites.length}+ Websites for Every Purpose</b></h2>
+    <h2 class="self-center text-4xl"><b>{data.length}+ Websites for Every Purpose</b></h2>
     <h2 class="self-center text-lg pt-3"><b>Save</b> your favorite sites</h2>
     <div class="flex self-center gap-5 pt-5 pb-14">
       {#each recents as {title,icon_url}}
@@ -71,10 +72,10 @@
       
     </div>
   </section>
-  <SectionCard name="Populares" {sites}/>
-  <SectionCard name="UX Tools" {sites}/>
-  <SectionCard name="UI Design" {sites}/>
-  <SectionCard name="IDE" {sites}/>
+  <SectionCard name="Populares" sites={data}/>
+  <SectionCard name="UX Tools" sites={data}/>
+  <SectionCard name="UI Design" sites={data}/>
+  <SectionCard name="IDE" sites={data}/>
 </div>
 <style>
   .page{

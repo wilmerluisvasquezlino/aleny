@@ -10,10 +10,9 @@
     WARNING:"#d29922",
     IMPORTANT: "#a06ff3"
   }
-  console.log(name=="WARNING")
 </script>
-<div class="flex gap-3 items-center p-2">
-  <div class="w-1 h-10 rounded-xl" style:background={color[name]}></div>
+<div class="flex gap-3 items-center shadow-md p-2 bg-white dark:bg-[#1b2335] rounded-xl">
+  <div class="w-1 h-10 rounded-xl flex-shrink-0" style:background={color[name]}></div>
   <!-- content -->
   <div class="flex flex-col py-1">
     <div class="font-bold pb-1">

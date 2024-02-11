@@ -4,7 +4,6 @@
   d=d.map((w)=>{
     return `https://mighty.tools/mockmind-api/content/human/${Math.round(Math.random()*50)}.jpg`
   })
-  console.log(d);
 
   d=d.sort(()=>Math.random()-0.5)
   let src=d[0]
